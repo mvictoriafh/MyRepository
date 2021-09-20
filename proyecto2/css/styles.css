@@ -1,0 +1,227 @@
+:root{
+        --primario:#435FDB;
+        --secundario: #5AACDB;
+        --secundarioOscuro:#628BFA;
+        --blanco: #fff;
+        --negro:#000;
+        --fuentePrincipal: font-family: 'Anton', sans-serif;
+        font-family: 'Heebo', sans-serif;
+}
+
+html{
+    box-sizing:border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+body{
+    background-color: var(--secundario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p{
+    font-size:1.8rem;
+    /* font-family: ; */
+    color:var(--blanco);
+   }
+   a{
+       text-decoration: none;
+   }
+   img{
+       max-width:100%;
+   }
+   .contenedor{
+       max-width: 120rem;
+       margin:0 auto;
+   }
+   h1, h2, h3 {
+       text-align: center;
+       color:var(--primario);
+       font-family:var(--fuentePrincipal);
+   }
+   h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+}
+    h2 {
+     font-family: 'Anton', sans-serif;
+    font-size: 3.2rem;
+}
+    h3 {
+        
+    font-family: 'Anton', sans-serif;
+     font-size:2.4rem;
+
+}
+/* header */
+.header{
+    display:flex;
+    justify-content: center;
+}
+.header__logo{
+    margin: 3rem 0;
+}
+.navegacion{
+    background-color: var(--primario);
+    padding: 1rem 0;
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.navegacion__enlace{
+font-family: 'Anton', sans-serif;
+color:var(--blanco);
+font-size: 3rem;
+margin-right: 2rem;
+}
+.navegacion__enlace:last-of-type{
+    margin-right: 0;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color:var(--negro);
+}
+.footer{
+    background-color: var(--primario);
+}
+.footer__texto{
+    font-family: 'Anton', sans-serif;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/* Productos */
+.producto{
+background-color: var(--secundarioOscuro);
+padding:1rem;
+}
+.producto__imagen{
+width:100%;
+}
+.producto__informacion{
+
+}
+.producto__precio{
+font-size: 2.8rem;
+color:yellow;
+}
+.producto__nombre{
+font-size: 3rem;
+}
+.producto__nombre,
+.producto__precio {
+    font-family: 'Anton', sans-serif;
+    margin: 1rem 0;
+    text-align: center;
+}
+/* Camisetas fotos grandes */
+.camiseta{
+min-height: 30rem;
+background-repeat: no-repeat;
+background-size: cover;
+/* background-color: var(--secundarioOscuro);
+padding:2rem;
+margin:1rem; */
+}
+.camiseta--boca{
+grid-row: 2/3;
+grid-column: 1/3;
+background-image: url(../img/grafico3.jpg);
+}
+.camiseta--river{
+    background-image: url(../img/grafico4.jpg);
+    grid-column: 1/3;
+    grid-row:8/9;
+}
+@media (min-width: 768px) {
+    .camiseta--river{
+        grid-row:5/6;
+        grid-column: 2/4;}
+}
+/* Nosotros */
+.contenedor{
+    display:grid;
+}
+.nosotros{
+    display:grid;
+    grid-template-rows: 1fr;
+}
+@media (min-width:768px){
+.nosotros{
+grid-template-columns: 1fr 1fr;
+column-gap: 2rem;
+}}
+.nosotros__imagen{
+grid-row: 1/2;
+}
+@media (min-width:768px){
+    .nosotros__imagen{
+        grid-column: 2/3;
+        width:100%;
+    }
+}
+/* Bloques */
+
+.bloques{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+}
+@media (min-width:768px){
+    .bloques{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.bloque{
+    text-align: center;
+}
+.bloque p{
+    font-family: 'Heebo', sans-serif;
+    font-size: 17px;
+     /*line-height: 0.5rem; */
+}
+/* Pagina del producto */
+
+@media (min-width:768px){
+    .camisa{
+    display:grid;
+    grid-template-columns: 1fr 1fr;  
+    column-gap: 1rem;
+}}
+.formulario{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.formulario__campo{
+    border-color: var(--secundarioOscuro);
+    border-width: 1rem;
+    border-style: solid;
+}
+.formulario__submit{
+    background-color:var(--primario);
+    color:white;
+    border:none;
+    font-size: 2rem;
+    font-family: 'Heebo', sans-serif;
+    padding:2rem;
+    transition: font-size .3s ease;
+    grid-column: 1/3;
+}
+.formulario__submit:hover{
+font-size: 2.2rem;
+cursor:pointer;
+background-color: var(--secundarioOscuro);
+}
